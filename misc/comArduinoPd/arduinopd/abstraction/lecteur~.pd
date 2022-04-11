@@ -1,0 +1,39 @@
+#N canvas 0 50 1920 997 10;
+#X obj 67 267 t b b;
+#X obj 67 238 inlet;
+#X obj 228 249 openpanel;
+#X msg 228 274 set open \$1;
+#X msg 67 302 1;
+#X msg 104 304 open C:/Users/R2mix/Desktop/siarmx/siarmx.wav;
+#X obj 67 351 readsf~ 2 44100;
+#X obj 351 164 inlet;
+#X msg 351 228 0;
+#X obj 184 380 bang;
+#X obj 184 405 spigot;
+#X obj 66 424 outlet~;
+#X obj 124 452 outlet~;
+#X obj 100 110 cnv 15 100 60 empty empty Lecteur 20 10 1 16 -66577
+-260097 0;
+#X obj 161 129 bng 25 250 50 0 empty empty Ouvrir -2 32 1 12 -260097
+-99865 -260097;
+#X obj 113 129 tgl 25 0 empty empty Boucle -4 32 1 12 -260097 -99865
+-260097 0 1;
+#X obj 351 192 bang;
+#X connect 0 0 4 0;
+#X connect 0 1 5 0;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 4 0 6 0;
+#X connect 5 0 6 0;
+#X connect 6 0 11 0;
+#X connect 6 1 12 0;
+#X connect 6 2 9 0;
+#X connect 7 0 16 0;
+#X connect 8 0 6 0;
+#X connect 9 0 10 0;
+#X connect 10 0 4 0;
+#X connect 14 0 2 0;
+#X connect 15 0 10 1;
+#X connect 16 0 8 0;
+#X coords 0 -1 1 1 100 80 2 100 100;
