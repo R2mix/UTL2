@@ -1,0 +1,23 @@
+#N canvas -8 -8 1920 997 10;
+#X obj 100 109 cnv 15 100 60 empty empty Sinus 25 12 0 18 -66577 -260097
+0;
+#X obj 42 228 inlet~;
+#X obj 44 361 osc~;
+#X obj 137 312 line~;
+#X obj 137 285 pack 0 20;
+#X obj 42 450 outlet~;
+#X obj 111 133 hsl 80 30 0 1000 0 1 empty empty Hz-1000 5 15 1 12 -99865
+-260097 -260097 7900 1;
+#X obj 278 99 inlet;
+#X obj 43 417 *~ 0.6;
+#X msg 296 248 label Hz-\$1;
+#X connect 1 0 2 0;
+#X connect 2 0 8 0;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 6 0 4 0;
+#X connect 6 0 9 0;
+#X connect 7 0 6 0;
+#X connect 8 0 5 0;
+#X connect 9 0 6 0;
+#X coords 0 -1 1 1 100 80 2 100 100;

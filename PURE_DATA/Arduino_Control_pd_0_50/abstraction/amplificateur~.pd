@@ -1,0 +1,23 @@
+#N canvas 0 50 1920 997 10;
+#X obj 100 110 cnv 15 100 60 empty empty Amplificateur 5 10 0 14 -66577
+-260097 0;
+#X obj 37 239 inlet~;
+#X obj 38 456 outlet~;
+#X obj 111 131 hsl 80 30 0 1 0 1 empty empty Db-0.556962 0 15 1 12
+-99865 -260097 -260097 4400 1;
+#X obj 38 425 *~;
+#X obj 113 233 line~;
+#X obj 113 206 pack 0 20;
+#X obj 210 241 inlet~;
+#X obj 129 39 inlet;
+#X msg 321 116 label Db-\$1;
+#X connect 1 0 4 0;
+#X connect 3 0 6 0;
+#X connect 3 0 9 0;
+#X connect 4 0 2 0;
+#X connect 5 0 4 1;
+#X connect 6 0 5 0;
+#X connect 7 0 4 1;
+#X connect 8 0 3 0;
+#X connect 9 0 3 0;
+#X coords 0 -1 1 1 100 80 2 100 100;
