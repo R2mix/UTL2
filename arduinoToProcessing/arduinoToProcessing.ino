@@ -1,22 +1,22 @@
 void setup() {
   Serial.begin(115200); // sert à initialiser le port série
+  pinMode(6,  INPUT_PULLUP);
+  pinMode(7,  INPUT_PULLUP);
+  pinMode(8,  INPUT_PULLUP);
   pinMode(9,  INPUT_PULLUP);
-  pinMode(10,  INPUT_PULLUP);
-  pinMode(11,  INPUT_PULLUP);
-  pinMode(12,  INPUT_PULLUP);
 
 }
 
 void loop() {
-  Serial.print(digitalRead(9));
+  Serial.print(digitalRead(6));
   Serial.print(" "); // les espaces servent à séparer les différents capteurs dans le terminal
-  Serial.print(digitalRead(10));
+  Serial.print(digitalRead(7));
   Serial.print(" ");
-  Serial.print(digitalRead(11));
+  Serial.print(digitalRead(8));
   Serial.print(" ");
-  Serial.print(digitalRead(12));
+  Serial.print(digitalRead(9));
   Serial.print(" ");
-  Serial.print(analogRead(A0) / 1023.00);
+  Serial.print(analogRead(A0));
   Serial.print("\n"); // retour à la ligne pour terminer la séquence des capteurs
-  delay(16);
+  //delay(1);
 }
